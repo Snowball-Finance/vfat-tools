@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="row mt-20">
-                        <div class="col-sm-2 col-sm-2 col-md-3"></div>
+                        <div class="col-sm-3 col-sm-3 col-md-2"></div>
                         <div class="col-sm-3 col-sm-3 col-md-2">
                             <a href="<%= PP %>/compound/">
                                 <button class="font-size-16 btn-block btn" type="button">
@@ -31,6 +31,13 @@
                                 </button>
                             </a>
                         </div>
+                        <div class="col-sm-3 col-sm-3 col-md-2">
+                            <a href="<%= PP %>/joe/">
+                                <button class="font-size-16 btn-block btn" type="button">
+                                    JOE
+                                </button>
+                            </a>
+                        </div>   
                         <div class="col-sm-3 col-sm-3 col-md-2">                            
                             <button class="font-size-16 btn-block btn btn-primary" type="button">
                                 SNOB
@@ -142,7 +149,7 @@
             <pre id="log" style="margin-left: 10px;">
             </pre>
 
-            <%- include(`${partials}/scripts`, { shared: 'shared_snob', scriptname: 'snob'}); -%>
+            <%- include(`${partials}/scripts`, { shared: 'shared', scriptname: 'snob'}); -%>
             <%- include(`${partials}/footer`); -%>
         </div>
     </div>
