@@ -15,12 +15,12 @@ async function main() {
   const ICEQUEEN_ABI = [{ "type": "constructor", "stateMutability": "nonpayable", "inputs": [{ "type": "address", "name": "_snowball", "internalType": "contract Snowball" }, { "type": "address", "name": "_devfund", "internalType": "address" }, { "type": "address", "name": "_treasury", "internalType": "address" }, { "type": "uint256", "name": "_snowballPerBlock", "internalType": "uint256" }, { "type": "uint256", "name": "_startBlock", "internalType": "uint256" }, { "type": "uint256", "name": "_bonusEndBlock", "internalType": "uint256" }] }, { "type": "event", "name": "Deposit", "inputs": [{ "type": "address", "name": "user", "internalType": "address", "indexed": true }, { "type": "uint256", "name": "pid", "internalType": "uint256", "indexed": true }, { "type": "uint256", "name": "amount", "internalType": "uint256", "indexed": false }], "anonymous": false }, { "type": "event", "name": "EmergencyWithdraw", "inputs": [{ "type": "address", "name": "user", "internalType": "address", "indexed": true }, { "type": "uint256", "name": "pid", "internalType": "uint256", "indexed": true }, { "type": "uint256", "name": "amount", "internalType": "uint256", "indexed": false }], "anonymous": false }, { "type": "event", "name": "OwnershipTransferred", "inputs": [{ "type": "address", "name": "previousOwner", "internalType": "address", "indexed": true }, { "type": "address", "name": "newOwner", "internalType": "address", "indexed": true }], "anonymous": false }, { "type": "event", "name": "Recovered", "inputs": [{ "type": "address", "name": "token", "internalType": "address", "indexed": false }, { "type": "uint256", "name": "amount", "internalType": "uint256", "indexed": false }], "anonymous": false }, { "type": "event", "name": "Withdraw", "inputs": [{ "type": "address", "name": "user", "internalType": "address", "indexed": true }, { "type": "uint256", "name": "pid", "internalType": "uint256", "indexed": true }, { "type": "uint256", "name": "amount", "internalType": "uint256", "indexed": false }], "anonymous": false }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "BONUS_MULTIPLIER", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "add", "inputs": [{ "type": "uint256", "name": "_allocPoint", "internalType": "uint256" }, { "type": "address", "name": "_lpToken", "internalType": "contract IERC20" }, { "type": "bool", "name": "_withUpdate", "internalType": "bool" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "bonusEndBlock", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "deposit", "inputs": [{ "type": "uint256", "name": "_pid", "internalType": "uint256" }, { "type": "uint256", "name": "_amount", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "devFundDivRate", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "address", "name": "", "internalType": "address" }], "name": "devfund", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "emergencyWithdraw", "inputs": [{ "type": "uint256", "name": "_pid", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "getMultiplier", "inputs": [{ "type": "uint256", "name": "_from", "internalType": "uint256" }, { "type": "uint256", "name": "_to", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "massUpdatePools", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "address", "name": "", "internalType": "address" }], "name": "owner", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "pendingSnowball", "inputs": [{ "type": "uint256", "name": "_pid", "internalType": "uint256" }, { "type": "address", "name": "_user", "internalType": "address" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "address", "name": "lpToken", "internalType": "contract IERC20" }, { "type": "uint256", "name": "allocPoint", "internalType": "uint256" }, { "type": "uint256", "name": "lastRewardBlock", "internalType": "uint256" }, { "type": "uint256", "name": "accSnowballPerShare", "internalType": "uint256" }], "name": "poolInfo", "inputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "poolLength", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "renounceOwnership", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "set", "inputs": [{ "type": "uint256", "name": "_pid", "internalType": "uint256" }, { "type": "uint256", "name": "_allocPoint", "internalType": "uint256" }, { "type": "bool", "name": "_withUpdate", "internalType": "bool" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "setBonusEndBlock", "inputs": [{ "type": "uint256", "name": "_bonusEndBlock", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "setDevFundDivRate", "inputs": [{ "type": "uint256", "name": "_devFundDivRate", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "setSnowballPerBlock", "inputs": [{ "type": "uint256", "name": "_snowballPerBlock", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "setTreasuryDivRate", "inputs": [{ "type": "uint256", "name": "_treasuryDivRate", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "address", "name": "", "internalType": "contract Snowball" }], "name": "snowball", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "snowballPerBlock", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "startBlock", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "totalAllocPoint", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "transferOwnership", "inputs": [{ "type": "address", "name": "newOwner", "internalType": "address" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "address", "name": "", "internalType": "address" }], "name": "treasury", "inputs": [] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }], "name": "treasuryDivRate", "inputs": [] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "updateDevfund", "inputs": [{ "type": "address", "name": "_devfund", "internalType": "address" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "updatePool", "inputs": [{ "type": "uint256", "name": "_pid", "internalType": "uint256" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "updateTreasury", "inputs": [{ "type": "address", "name": "_treasury", "internalType": "address" }] }, { "type": "function", "stateMutability": "view", "outputs": [{ "type": "uint256", "name": "amount", "internalType": "uint256" }, { "type": "uint256", "name": "rewardDebt", "internalType": "uint256" }], "name": "userInfo", "inputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }, { "type": "address", "name": "", "internalType": "address" }] }, { "type": "function", "stateMutability": "nonpayable", "outputs": [], "name": "withdraw", "inputs": [{ "type": "uint256", "name": "_pid", "internalType": "uint256" }, { "type": "uint256", "name": "_amount", "internalType": "uint256" }] }]
 
   // MAINNET ADDRESSES
-  const TUNDRA_ADDRESS = "0x6B41E5c07F2d382B921DE5C34ce8E2057d84C042"
-  const STABLE_1_ADDRESS = "0xde3A24028580884448a5397872046a019649b084"
-  const STABLE_2_ADDRESS = "0xaEb044650278731Ef3DC244692AB9F64C78FfaEA"
-  const STABLE_3_ADDRESS = "0xbA7dEebBFC5fA1100Fb055a87773e1E99Cd3507a"
-  const STABLE_4_ADDRESS = "0xbA7dEebBFC5fA1100Fb055a87773e1E99Cd3507a"
-  const S4D_ADDRESS = "0xdE1A11C331a0E45B9BA8FeE04D4B51A745f1e4A4"
+  const TUNDRA_ADDRESS = "0xA0bE4f05E37617138Ec212D4fB0cD2A8778a535F"
+  const STABLE_1_ADDRESS = "0xDC42728B0eA910349ed3c6e1c9Dc06b5FB591f98" // FRAX
+  const STABLE_2_ADDRESS = "0x1C20E891Bab6b1727d14Da358FAe2984Ed9B59EB" // TUSD
+  const STABLE_3_ADDRESS = "0xd586E7F844cEa2F87f50152665BCbc2C279D8d70" // DAI.e
+  const STABLE_4_ADDRESS = "0xc7198437980c041c805A1EDcbA50c1Ce5db95118" // USDT.e
+  const S4D_ADDRESS = "0xB91124eCEF333f17354ADD2A8b944C76979fE3EC"
 
   const ICEQUEEN_ADDR = "0xB12531a2d758c7a8BF09f44FC88E646E1BF9D375";
 
@@ -129,14 +129,17 @@ async function main() {
   $("#t1_supply").html(`${t1_supply_display}`);
   $("#t2_supply").html(`${t2_supply_display}`);
   $("#t3_supply").html(`${t3_supply_display}`);
+  $("#t4_supply").html(`${t4_supply_display}`);
   $("#t1_supply_percentage").html(`${s1_supply_percentage.toLocaleString()}%`);
   $("#t2_supply_percentage").html(`${s2_supply_percentage.toLocaleString()}%`);
   $("#t3_supply_percentage").html(`${s3_supply_percentage.toLocaleString()}%`);
+  $("#t4_supply_percentage").html(`${s4_supply_percentage.toLocaleString()}%`);
   $("#combined_supply").html(`$${combined_supply_display}`);
   console.log("sUSD Supply:", S4D_supply / 1e18);
   console.log("Tundra S1 Supply:", s1_supply / 1e6);
   console.log("Tundra S2 Supply:", s2_supply / 1e18);
   console.log("Tundra S3 Supply:", s3_supply / 1e18);
+  console.log("Tundra S4 Supply:", s4_supply / 1e18);
   console.log("Tundra Combined Supply:", combined_supply);
   console.log("user sUSD Supply:", S4D_balance / 1e18);
   console.log("user_percentage:", `${user_percentage}`);
@@ -145,29 +148,31 @@ async function main() {
   const s1_allowance = await STABLE_1_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
   const s2_allowance = await STABLE_2_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
   const s3_allowance = await STABLE_3_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
+  const s4_allowance = await STABLE_4_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
   const S4D_allowance = await S4D_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
   console.log("Token 1 allowance: ", s1_allowance / 1e6);
   console.log("Token 2 allowance: ", s2_allowance / 1e18);
   console.log("Token 3 allowance: ", s3_allowance / 1e18);
+  console.log("Token 4 allowance: ", s4_allowance / 1e18);
   console.log("S4D allowance: ", S4D_allowance / 1e18);
 
   // approvals
   if (s1_allowance == 0) {
-    $("#approve_swap_btn_usdt").show();
+    $("#approve_swap_btn_FRAX").show();
     $("#token_1_approve").show();
     $("#token_1_approve").click(function(){
       approveStable1();
     });
-    $("#approve_swap_btn_usdt").click(function(){
+    $("#approve_swap_btn_FRAX").click(function(){
       approveStable1();
     });
   } else {
-    $("#revoke_swap_btn_usdt").show();
+    $("#revoke_swap_btn_FRAX").show();
     $("#token_1_revoke").show();
     $("#token_1_revoke").click(function() {
       revokeStable1();
     });
-    $("#revoke_swap_btn_usdt").click(function() {
+    $("#revoke_swap_btn_FRAX").click(function() {
       revokeStable1();
     });
   }
@@ -176,7 +181,7 @@ async function main() {
     $("#token_2_approve").click(function(){
       approveStable2();
     });
-    $("#approve_swap_btn_busd").click(function(){
+    $("#approve_swap_btn_TUSD").click(function(){
       approveStable2();
     });
   } else {
@@ -184,7 +189,7 @@ async function main() {
     $("#token_2_revoke").click(function() {
       revokeStable2();
     });
-    $("#revoke_swap_btn_busd").click(function(){
+    $("#revoke_swap_btn_TUSD").click(function(){
       revokeStable2();
     });
   }
@@ -193,7 +198,7 @@ async function main() {
     $("#token_3_approve").click(function(){
       approveStable3();
     });
-    $("#approve_swap_btn_dai").click(function(){
+    $("#approve_swap_btn_DAI").click(function(){
       approveStable3();
     });
   } else {
@@ -201,13 +206,30 @@ async function main() {
     $("#token_3_revoke").click(function() {
       revokeStable3();
     });
-    $("#revoke_swap_btn_dai").click(function(){
+    $("#revoke_swap_btn_DAI").click(function(){
+      revokeStable3();
+    });
+  }
+  if (s4_allowance == 0) {
+    $("#token_4_approve").show();
+    $("#token_4_approve").click(function(){
+      approveStable4();
+    });
+    $("#approve_swap_btn_USDT").click(function(){
+      approveStable3();
+    });
+  } else {
+    $("#token_3_revoke").show();
+    $("#token_3_revoke").click(function() {
+      revokeStable3();
+    });
+    $("#revoke_swap_btn_USDT").click(function(){
       revokeStable3();
     });
   }
 
   $("#deposit_btn").click(function(){
-    loadDepositModal(TUNDRA_CONTRACT, App, S4D_ratio, STABLE_1_TOKEN, STABLE_2_TOKEN, STABLE_3_TOKEN, TUNDRA_ADDRESS);
+    loadDepositModal(TUNDRA_CONTRACT, App, S4D_ratio, STABLE_1_TOKEN, STABLE_2_TOKEN, STABLE_3_TOKEN, STABLE_4_TOKEN, TUNDRA_ADDRESS);
     $("#deposit_confirm_btn").prop('disabled', false);
   });
   $("#deposit_confirm_btn").click(function(){
@@ -233,29 +255,35 @@ async function main() {
     });
   }
 
-  $("#from_usdt").click(function() {
-    loadFrom(s1_balance_formatted, 'usdt', s1_allowance, TUNDRA_CONTRACT);
+  $("#from_FRAX").click(function() {
+    loadFrom(s1_balance_formatted, 'frax', s1_allowance, TUNDRA_CONTRACT);
   });
-  $("#from_busd").click(function() {
+  $("#from_TUSD").click(function() {
     loadFrom(s2_balance_formatted, 'busd', s2_allowance, TUNDRA_CONTRACT);
   });
-  $("#from_dai").click(function() {
+  $("#from_DAI").click(function() {
     loadFrom(s3_balance_formatted, 'dai', s3_allowance, TUNDRA_CONTRACT);
   });
+  $("#from_USDT").click(function() {
+    loadFrom(s4_balance_formatted, 'usdt', s4_allowance, TUNDRA_CONTRACT);
+  });
 
-  $("#to_usdt").click(function() {
-    loadTo('usdt', TUNDRA_CONTRACT);
+  $("#to_FRAX").click(function() {
+    loadTo('frax', TUNDRA_CONTRACT);
   });
-  $("#to_busd").click(function() {
-    loadTo('busd', TUNDRA_CONTRACT);
+  $("#to_TUSD").click(function() {
+    loadTo('tusd', TUNDRA_CONTRACT);
   });
-  $("#to_dai").click(function() {
+  $("#to_DAI").click(function() {
     loadTo('dai', TUNDRA_CONTRACT);
+  });
+  $("#to_USDT").click(function() {
+    loadTo('usdt', TUNDRA_CONTRACT);
   });
 
   // set defaults
-  $("#swap_input").data("from_token", 'usdt');
-  $("#swap_input").data("to_token", 'busd');
+  $("#swap_input").data("from_token", 'frax');
+  $("#swap_input").data("to_token", 'tusd');
 
   $("#swap_input").change(function() {
     let from_token = $("#swap_input").data("from_token");
@@ -272,7 +300,7 @@ async function main() {
   $("#swap_btn").click(function(){
     let from_token = $("#swap_input").data("from_token");
     let to_token = $("#swap_input").data("to_token");
-    swapTokens(from_token, to_token, TUNDRA_CONTRACT, STABLE_1_TOKEN, STABLE_2_TOKEN, STABLE_3_TOKEN, TUNDRA_ADDRESS, App);
+    swapTokens(from_token, to_token, TUNDRA_CONTRACT, STABLE_1_TOKEN, STABLE_2_TOKEN, STABLE_3_TOKEN, STABLE_4_TOKEN, TUNDRA_ADDRESS, App);
   });
 
   $("#withdraw_percentage, #radio-withdraw-combo, #radio-withdraw-usdt, #radio-withdraw-busd, #radio-withdraw-dai").change(function() {
@@ -283,16 +311,20 @@ async function main() {
     let from_token = $("#swap_input").data("from_token");
     let to_token = $("#swap_input").data("to_token");
     switch(from_token) {
-      case 'usdt':
+      case 'frax':
         $("#swap_input").val(s1_balance_formatted);
         updateSwapAmount(from_token, to_token, TUNDRA_CONTRACT);
         break;
-      case 'busd':
+      case 'tusd':
         $("#swap_input").val(s2_balance_formatted);
         updateSwapAmount(from_token, to_token, TUNDRA_CONTRACT);
         break;
       case 'dai':
         $("#swap_input").val(s3_balance_formatted);
+        updateSwapAmount(from_token, to_token, TUNDRA_CONTRACT);
+        break;
+      case 'usdt':
+        $("#swap_input").val(s4_balance_formatted);
         updateSwapAmount(from_token, to_token, TUNDRA_CONTRACT);
         break;
       default:
@@ -307,6 +339,9 @@ async function main() {
   });
   $("#token_3_max").click(function(){
     $("#token_3_input").val(s3_balance_formatted);
+  });
+  $("#token_4_max").click(function(){
+    $("#token_4_input").val(s4_balance_formatted);
   });
 
   $("#remove_liquidity_btn").click(function(){
@@ -338,9 +373,10 @@ const updateWithdrawAmount = async function(TUNDRA_CONTRACT, S4D_TOKEN, App){
   const withdrawPercentage = $("#withdraw_percentage").val();
   $("#withdraw_percentage_display").html(withdrawPercentage);
   const comboChecked = $("#radio-withdraw-combo").is(':checked');
-  const usdtChecked = $("#radio-withdraw-usdt").is(':checked');
-  const busdChecked = $("#radio-withdraw-busd").is(':checked');
-  const daiChecked = $("#radio-withdraw-dai").is(':checked');
+  const fraxChecked = $("#radio-withdraw-FRAX").is(':checked');
+  const tusdChecked = $("#radio-withdraw-TUSD").is(':checked');
+  const daiChecked = $("#radio-withdraw-DAI").is(':checked');
+  const usdtChecked = $("#radio-withdraw-USDT").is(':checked');
   console.log("withdrawPercentage:", withdrawPercentage);
   const S4D_balance = await S4D_TOKEN.balanceOf(App.YOUR_ADDRESS);
   console.log("S4D_balance:", S4D_balance);
@@ -352,22 +388,25 @@ const updateWithdrawAmount = async function(TUNDRA_CONTRACT, S4D_TOKEN, App){
       $("#token_1_withdraw_input").val((withdrawAmount[0] / 1e6).toFixed(2));
       $("#token_2_withdraw_input").val((withdrawAmount[1] / 1e18).toFixed(2));
       $("#token_3_withdraw_input").val((withdrawAmount[2] / 1e18).toFixed(2));
+      $("#token_4_withdraw_input").val((withdrawAmount[2] / 1e18).toFixed(2));
     }
   }
-  if (usdtChecked){
+  if (fraxChecked){
     const withdrawAmount = await TUNDRA_CONTRACT.calculateRemoveLiquidityOneToken(App.YOUR_ADDRESS, calculatedWithdraw, 0);
     if (withdrawAmount) {
-      $("#token_1_withdraw_input").val((withdrawAmount / 1e6).toFixed(2));
+      $("#token_1_withdraw_input").val((withdrawAmount / 1e18).toFixed(2));
       $("#token_2_withdraw_input").val(0);
       $("#token_3_withdraw_input").val(0);
+      $("#token_4_withdraw_input").val(0);
     }
   }
-  if (busdChecked){
+  if (tusdhecked){
     const withdrawAmount = await TUNDRA_CONTRACT.calculateRemoveLiquidityOneToken(App.YOUR_ADDRESS, calculatedWithdraw, 1);
     if (withdrawAmount) {
       $("#token_1_withdraw_input").val(0);
       $("#token_2_withdraw_input").val((withdrawAmount / 1e18).toFixed(2));
       $("#token_3_withdraw_input").val(0);
+      $("#token_4_withdraw_input").val(0);
     }
   }
   if (daiChecked){
@@ -376,6 +415,16 @@ const updateWithdrawAmount = async function(TUNDRA_CONTRACT, S4D_TOKEN, App){
       $("#token_1_withdraw_input").val(0);
       $("#token_2_withdraw_input").val(0);
       $("#token_3_withdraw_input").val((withdrawAmount / 1e18).toFixed(2));
+      $("#token_2_withdraw_input").val(0);
+    }
+  }
+  if (usdtChecked){
+    const withdrawAmount = await TUNDRA_CONTRACT.calculateRemoveLiquidityOneToken(App.YOUR_ADDRESS, calculatedWithdraw, 2);
+    if (withdrawAmount) {
+      $("#token_1_withdraw_input").val(0);
+      $("#token_2_withdraw_input").val(0);
+      $("#token_3_withdraw_input").val(0);
+      $("#token_2_withdraw_input").val((withdrawAmount / 1e6).toFixed(2));
     }
   }
 }
@@ -409,24 +458,23 @@ const addEventToDom = async function (event, App) {
   let transactionUrl = `https://cchain.explorer.avax.network/tx/${event.transactionHash}/token-transfers`;
   let row1 = ``;
 
+  const tokens = ['DAI', 'FRAX', 'TUSD', 'USDT'];
+  const precision = [1e18, 1e18, 1e18, 1e6];
+
   switch(event.event) {
     case 'AddLiquidity':
     case 'RemoveLiquidity':
       let label = event.event == 'RemoveLiquidity' ? 'Remove' : 'Add';
       let tokenAmounts = event.args.tokenAmounts;
       let deposits = [];
-      if (tokenAmounts[0] > 0) {
-        let usdt = new Intl.NumberFormat('en-US').format((tokenAmounts[0] / 1e6).toFixed(2));
-        deposits.push(`$${usdt} USDT`);
-      }
-      if (tokenAmounts[1] > 0) {
-        let busd = new Intl.NumberFormat('en-US').format((tokenAmounts[1] / 1e18).toFixed(2));
-        deposits.push(`$${busd} BUSD`);
-      }
-      if (tokenAmounts[2] > 0) {
-        let dai = new Intl.NumberFormat('en-US').format((tokenAmounts[2] / 1e18).toFixed(2));
-        deposits.push(`$${dai} DAI`);
-      }
+
+      tokenAmounts.map((token, idx) => {
+        if (token > 0) {
+          let formated = new Intl.NumberFormat('en-US').format((tokenAmounts[0] / precision[idx]).toFixed(2));
+          deposits.push(`$${formated} ${tokens[idx]}`);
+        }
+      });
+      
       let depositsDisplay = deposits.join(' + ');
       row1 = `<div class="mb-5"><a target="_blank" href="${transactionUrl}"><span class="font-weight-bold">${label}: </span>`
       row1 += `${depositsDisplay} - ${event.timestamp}</a></div>`;
@@ -435,23 +483,17 @@ const addEventToDom = async function (event, App) {
       let labelRemove = 'Remove';
       let tokenAmount = event.args.tokensBought;
       let tokenTypeId = event.args.boughtId;
-      let tokenLabel = tokenTypeId == 0 ? 'USDT' : tokenTypeId == 1 ? 'BUSD' : 'DAI';
-      let decimals = tokenTypeId ==  0 ? 1e6 : 1e18;
       row1 = `<div class="mb-5"><a target="_blank" href="${transactionUrl}"><span class="font-weight-bold">${labelRemove}: </span>`
-      row1 += `$${(tokenAmount / decimals).toFixed(2)} ${tokenLabel} - ${event.timestamp}</a></div>`;
+      row1 += `$${(tokenAmount / precision[tokenTypeId]).toFixed(2)} ${tokens[tokenTypeId]} - ${event.timestamp}</a></div>`;
       break;
     case 'TokenSwap':
       let tokenBought = event.args.boughtId;
       let tokenSold = event.args.soldId;
       let boughtAmount = event.args.tokensBought;
       let soldAmount = event.args.tokensSold;
-      let decimalsBought = tokenBought == 0 ? 1e6 : 1e18;
-      let decimalsSold = tokenSold == 0 ? 1e6 : 1e18;
-      let tokenBoughtLabel = tokenBought == 0 ? 'USDT' : tokenBought == 1 ? 'BUSD' : ' DAI';
-      let tokenSoldLabel = tokenSold == 0 ? 'USDT' : tokenSold == 1 ? 'BUSD' : ' DAI';
-      let boughtDisplay = new Intl.NumberFormat('en-US').format((boughtAmount / decimalsBought).toFixed(2));
-      let soldDisplay = new Intl.NumberFormat('en-US').format((soldAmount / decimalsSold).toFixed(2));
-      row1 = `<div class="mb-5"><a target="_blank" href="${transactionUrl}"><span class="font-weight-bold">Trade: </span>$${soldDisplay} ${tokenSoldLabel} for $${boughtDisplay} ${tokenBoughtLabel} - ${event.timestamp}</a></div>`;
+      let boughtDisplay = new Intl.NumberFormat('en-US').format((boughtAmount / precision[event.args.boughtId]).toFixed(2));
+      let soldDisplay = new Intl.NumberFormat('en-US').format((soldAmount / precision[event.args.soldId]).toFixed(2));
+      row1 = `<div class="mb-5"><a target="_blank" href="${transactionUrl}"><span class="font-weight-bold">Trade: </span>$${soldDisplay} ${tokens[event.args.soldId]} for $${boughtDisplay} ${tokens[event.args.boughtId]} - ${event.timestamp}</a></div>`;
       break;
     default:
       break;
@@ -471,33 +513,40 @@ const swapTokens = async function(from_token, to_token, TUNDRA_CONTRACT, STABLE_
   let allowance = 0;
 
   switch(from_token) {
-    case 'usdt':
+    case 'frax':
       from_decimals = 3;
       allowance = await STABLE_1_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
-      token1index = 0;
-      break;
-    case 'busd':
-      allowance = await STABLE_2_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
       token1index = 1;
+      break;
+    case 'tusd':
+      allowance = await STABLE_2_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
+      token1index = 2;
       break;
     case 'dai':
       allowance = await STABLE_3_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
-      token1index = 2;
+      token1index = 0;
+      break;
+    case 'usdt':
+      allowance = await STABLE_4_TOKEN.allowance(App.YOUR_ADDRESS, TUNDRA_ADDRESS)
+      token1index = 3;
       break;
     default:
       token1index = null;
   }
 
   switch(to_token) {
-    case 'usdt':
-      to_decimals = 1e6;
-      token2index = 0;
-      break;
-    case 'busd':
+    case 'frax':
       token2index = 1;
       break;
-    case 'dai':
+    case 'tusd':
       token2index = 2;
+      break;
+    case 'dai':
+      token2index = 0;
+      break;
+    case 'usdt':
+      token2index = 3;
+      to_decimals = 1e6;
       break;
     default:
       token2index = null;
@@ -553,30 +602,36 @@ const updateSwapAmount = async function(from_token, to_token, TUNDRA_CONTRACT){
   let to_decimals = 1e18;
 
   switch(from_token) {
-    case 'usdt':
-      from_decimals = 3;
-      token1index = 0;
-      break;
-    case 'busd':
+    case 'frax':
       token1index = 1;
       break;
-    case 'dai':
+    case 'tusd':
       token1index = 2;
+      break;
+    case 'dai':
+      token1index = 0;
+      break;
+    case 'usdt':
+      token1index = 3;
+      from_decimals = 3;
       break;
     default:
       token1index = null;
   }
 
   switch(to_token) {
-    case 'usdt':
-      to_decimals = 1e6;
-      token2index = 0;
-      break;
-    case 'busd':
+    case 'frax':
       token2index = 1;
       break;
-    case 'dai':
+    case 'tusd':
       token2index = 2;
+      break;
+    case 'dai':
+      token2index = 0;
+      break;
+    case 'usdt':
+      token2index = 3;
+      to_decimals = 1e6;
       break;
     default:
       token2index = null;
@@ -592,9 +647,10 @@ const updateSwapAmount = async function(from_token, to_token, TUNDRA_CONTRACT){
   }
 }
 const loadTo = async function(token, TUNDRA_CONTRACT){
-  $("#to_usdt_button").hide();
-  $("#to_busd_button").hide();
-  $("#to_dai_button").hide();
+  $("#to_TUSD_button").hide();
+  $("#to_DAI_button").hide();
+  $("#to_FRAX_button").hide();
+  $("#to_USDT_button").hide();
   $("#to_" + token + "_button").show();
   $("#swap_input").data("to_token", token);
   let from_token = $("#swap_input").data("from_token");
@@ -602,15 +658,18 @@ const loadTo = async function(token, TUNDRA_CONTRACT){
   $("#from_balance").click(); //click something to hide menu
 }
 const loadFrom = async function(balance, token, allowance, TUNDRA_CONTRACT){
-  $("#from_usdt_button").hide();
-  $("#from_busd_button").hide();
-  $("#from_dai_button").hide();
-  $("#approve_swap_btn_usdt").hide();
-  $("#revoke_swap_btn_usdt").hide();
-  $("#approve_swap_btn_busd").hide();
-  $("#revoke_swap_btn_busd").hide();
-  $("#approve_swap_btn_dai").hide();
-  $("#revoke_swap_btn_dai").hide();
+  $("#from_USDT_button").hide();
+  $("#from_TUSD_button").hide();
+  $("#from_FRAX_button").hide();
+  $("#from_DAI_button").hide();
+  $("#approve_swap_btn_USDT").hide();
+  $("#revoke_swap_btn_USDT").hide();
+  $("#approve_swap_btn_TUSD").hide();
+  $("#revoke_swap_btn_TUSD").hide();
+  $("#approve_swap_btn_FRAX").hide();
+  $("#revoke_swap_btn_FRAX").hide();
+  $("#approve_swap_btn_DAI").hide();
+  $("#revoke_swap_btn_DAI").hide();
 
   $("#from_balance").html(balance);
   $("#from_" + token + "_button").show();
