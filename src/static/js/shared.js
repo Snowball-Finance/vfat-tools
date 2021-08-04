@@ -492,11 +492,11 @@ const genpool = async (pool) => {
   layoutpool({
     logo_token1: TOKEN_NAMES[pool.token0] == "VSO" ? 'https://assets.coingecko.com/coins/images/15169/small/versa.PNG' 
                : TOKEN_NAMES[pool.token0] == "JOE"  ? 'https://www.traderjoexyz.com/static/media/logo.bc60f78d.png'
-               : TOKEN_NAMES[pool.token0] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/blob/main/logos/all/${pool.token0}/logo.png`
+               : TOKEN_NAMES[pool.token0] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/main/logos/all/${pool.token0}/logo.png`
                : `https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/${pool.token0}/logo.png`,
     logo_token2: TOKEN_NAMES[pool.token1] == "VSO" ? 'https://assets.coingecko.com/coins/images/15169/small/versa.PNG' 
                : TOKEN_NAMES[pool.token1] == "JOE" ? 'https://www.traderjoexyz.com/static/media/logo.bc60f78d.png'
-               : TOKEN_NAMES[pool.token1] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/blob/main/logos/all/${pool.token1}/logo.png`
+               : TOKEN_NAMES[pool.token1] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/main/logos/all/${pool.token1}/logo.png`
                : `https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/${pool.token1}/logo.png`,
     url: pool.network == 'Pangolin' ? `https://app.pangolin.exchange/#/add/${pool.token0.toLowerCase()}/${pool.token1.toLowerCase()}` 
        : pool.network == 'TraderJoe' ? `https://www.traderjoexyz.com/#/pool/${pool.token0.toLowerCase()}/${pool.token1.toLowerCase()}`
