@@ -500,15 +500,10 @@ const genpool = async (pool) => {
     poolShareDisplay = withdrawDisplay;
     stakeDisplay = `Your LP value is <b>${reserve0Owned.toFixed(3)}</b> ${TOKEN_NAMES[token0Address]} / <b>${reserve1Owned.toFixed(3)}</b> ${TOKEN_NAMES[token1Address]} ($<b>${value.toFixed(2)}</b>)**</b>`
   }
+
   layoutpool({
-    logo_token1: TOKEN_NAMES[pool.token0] == "VSO" ? 'https://assets.coingecko.com/coins/images/15169/small/versa.PNG' 
-               : TOKEN_NAMES[pool.token0] == "JOE"  ? 'https://www.traderjoexyz.com/static/media/logo.bc60f78d.png'
-               : TOKEN_NAMES[pool.token0] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/main/logos/all/${pool.token0}/logo.png`
-               : `https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/${pool.token0}/logo.png`,
-    logo_token2: TOKEN_NAMES[pool.token1] == "VSO" ? 'https://assets.coingecko.com/coins/images/15169/small/versa.PNG' 
-               : TOKEN_NAMES[pool.token1] == "JOE" ? 'https://www.traderjoexyz.com/static/media/logo.bc60f78d.png'
-               : TOKEN_NAMES[pool.token1] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/main/logos/all/${pool.token1}/logo.png`
-               : `https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/${pool.token1}/logo.png`,
+    logo_token1: `https://raw.githubusercontent.com/Snowball-Finance/bridge-tokens/main/avalanche-tokens/${pool.token0}/logo.png`,
+    logo_token2: `https://raw.githubusercontent.com/Snowball-Finance/bridge-tokens/main/avalanche-tokens/${pool.token1}/logo.png`,
     url: pool.network == 'Pangolin' ? `https://app.pangolin.exchange/#/add/${pool.token0.toLowerCase()}/${pool.token1.toLowerCase()}` 
        : pool.network == 'TraderJoe' ? `https://www.traderjoexyz.com/#/pool/${pool.token0.toLowerCase()}/${pool.token1.toLowerCase()}`
        : '',

@@ -202,14 +202,8 @@ async function main() {
 
       claimableSnowballs += pendingSNOBTokensPool / 1e18;
 
-      let logo_token0 = TOKEN_NAMES[token_0] == "JOE" ? 'https://www.traderjoexyz.com/static/media/logo.bc60f78d.png'
-                      : TOKEN_NAMES[token_0] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/main/logos/all/${token_0}/logo.png`
-                      : TOKEN_NAMES[token_0] == "VSO" ? 'https://assets.coingecko.com/coins/images/15169/small/versa.PNG'
-                      : `https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/${token_0}/logo.png`;
-      let logo_token1 = TOKEN_NAMES[token_1] == "JOE" ? 'https://www.traderjoexyz.com/static/media/logo.bc60f78d.png'
-                      : TOKEN_NAMES[token_1] == "ELK" ? `https://raw.githubusercontent.com/elkfinance/tokens/main/logos/all/${token_1}/logo.png`
-                      : TOKEN_NAMES[token_0] == "VSO" ? 'https://assets.coingecko.com/coins/images/15169/small/versa.PNG'
-                      : `https://raw.githubusercontent.com/ava-labs/bridge-tokens/main/avalanche-tokens/${token_1}/logo.png`;
+      let logo_token0 = `https://raw.githubusercontent.com/Snowball-Finance/bridge-tokens/main/avalanche-tokens/${token_0}/logo.png`
+      let logo_token1 = `https://raw.githubusercontent.com/Snowball-Finance/bridge-tokens/main/avalanche-tokens/${token_1}/logo.png`
       pool({
         logo_token0 : logo_token0,
         logo_token1 : logo_token1,
